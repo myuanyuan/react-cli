@@ -1,0 +1,49 @@
+.baseTitleLayer {
+  width: 48px;
+  height: 12px;
+  font-family: "PingFangSC","Microsoft YaHei";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #2e4473;
+}
+.baseTitleRequired {
+  width: 48px;
+  height: 12px;
+  font-family: "PingFangSC","Microsoft YaHei";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #2e4473;
+}
+.baseTitleRequired:before {
+  display: inline-block;
+  margin-right: 4px;
+  content: "*";
+  font-family: "SimSun","Microsoft YaHei";
+  line-height: 1;
+  font-size: 12px;
+  color: #f04134;
+}
+.baseTitleVertical {
+  width: 48px;
+  height: 12px;
+  font-family: "PingFangSC","Microsoft YaHei";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #2E4473;
+}
+.baseTitleVertical:before {
+  display: inline-block;
+  margin-right: 4px;
+  content: "|";
+  font-family: "SimSun","Microsoft YaHei";
+  line-height: 1;
+  font-size: 12px;
+  color: #2E4473;
+  font-weight: bold;
+}

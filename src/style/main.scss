@@ -1,0 +1,9 @@
+@import './config.scss';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.ant-layout-content{
+  padding-top: $nav-height;
+}

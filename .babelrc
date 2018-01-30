@@ -1,0 +1,13 @@
+{
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0",
+      "env"
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-class-properties"
+      ]
+  }
+
