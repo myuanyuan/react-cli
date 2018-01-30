@@ -1,95 +1,28 @@
-export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
-export const INCREMENT = 'counter/INCREMENT'
-export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
-export const DECREMENT = 'counter/DECREMENT'
+import cFetch from './../utils/cFetch';
+import {
+PERSONAL_SVAE_ROLE_DATA_PENDING,
+PERSONAL_SVAE_ROLE_DATA_FULFILLED,
+PERSONAL_SVAE_ROLE_DATA_REJECTED,
+} from './../constants/actionTypes';
 
-const initialState = {
-  count: 0,
-  isIncrementing: false,
-  isDecrementing: false
-}
+const API_CONFIG = window.API_CONFIG;
 
-export default (state = initialState, action) => {
+export default function (state = { }, action) {
   switch (action.type) {
-    case INCREMENT_REQUESTED:
+    case PERSONAL_SVAE_ROLE_DATA_FULFILLED:
       return {
         ...state,
-        isIncrementing: true
-      }
-
-    case INCREMENT:
-      return {
-        ...state,
-        count: state.count + 1,
-        isIncrementing: !state.isIncrementing
-      }
-
-    case DECREMENT_REQUESTED:
-      return {
-        ...state,
-        isDecrementing: true
-      }
-
-    case DECREMENT:
-      return {
-        ...state,
-        count: state.count - 1,
-        isDecrementing: !state.isDecrementing
-      }
-
+        presonSaveRoleData: action.payload,
+      };
     default:
-      return state
+    return state;
   }
 }
 
-export const increment = () => {
-  return dispatch => {
-    dispatch({
-      type: INCREMENT_REQUESTED
-    })
-
-    dispatch({
-      type: INCREMENT
-    })
-  }
-}
-
-export const incrementAsync = () => {
-  return dispatch => {
-    dispatch({
-      type: INCREMENT_REQUESTED
-    })
-
-    return setTimeout(() => {
-      dispatch({
-        type: INCREMENT
-      })
-    }, 3000)
-  }
-}
-
-export const decrement = () => {
-  return dispatch => {
-    dispatch({
-      type: DECREMENT_REQUESTED
-    })
-
-    dispatch({
-      type: DECREMENT
-    })
-  }
-}
-
-export const decrementAsync = () => {
-  return dispatch => {
-    dispatch({
-      type: DECREMENT_REQUESTED
-    })
-
-    return setTimeout(() => {
-      dispatch({
-        type: DECREMENT
-      })
-    }, 3000)
-  }
+// 保存角色信息
+export function presonSaveRole(params) {
+  return {
+    type: PERSONAL_SVAE_ROLE_DATA_FULFILLED,
+    payload: cFetch(API_CONFIG.GET_ALL_ROLELIST, { method: 'PUT', body: JSON.stringify(params)}),
+  };
 }

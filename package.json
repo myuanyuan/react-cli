@@ -5,6 +5,7 @@
   "dependencies": {
     "6": "^0.0.1",
     "antd": "^3.1.6",
+    "axios": "^0.17.1",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators": "^6.24.1",
@@ -25,8 +26,11 @@
     "react-router-redux": "next",
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
+    "redux-axios-middleware": "^4.0.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-persist": "^5.5.0",
+    "redux-thunk": "^2.2.0",
+    "standard-error": "^1.1.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
