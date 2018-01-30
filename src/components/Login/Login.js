@@ -4,7 +4,7 @@ import './Login.css';
 
 const FormItem = Form.Item;
 
-@Form.create()
+// @Form.create()
 
 export class Login extends React.Component {
   constructor(props) {
