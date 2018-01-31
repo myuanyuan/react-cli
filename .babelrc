@@ -1,13 +1,4 @@
 {
-    "presets": [
-      "es2015",
-      "react",
-      "stage-0",
-      "env"
-    ],
-    "plugins": [
-      "transform-decorators-legacy",
-      "transform-class-properties"
-      ]
+    "presets": ["es2015","react-native-stage-0/decorator-support"],
+    "plugins": ["transform-decorators-legacy"]
   }
-

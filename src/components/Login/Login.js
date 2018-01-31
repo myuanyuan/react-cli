@@ -5,7 +5,7 @@ import './Login.css';
 const FormItem = Form.Item;
 
 // 疑似由于babel版本过新
-// @Form.create()
+@Form.create()
 
 export class Login extends React.Component {
   constructor(props) {
