@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-boolean-cast */
 import { message } from 'antd';
 import isPromise from './isPromise';
 
@@ -11,9 +12,9 @@ const defaultTypes = ['PENDING', 'FULFILLED', 'REJECTED'];
  */
 export default function promiseMiddleware(config = {}) {
   const promiseTypeSuffixes = config.promiseTypeSuffixes || defaultTypes;
-
   return (ref) => {
     const { dispatch } = ref;
+
     return next => (action) => {
       if (action.payload) {
         if (!isPromise(action.payload) && !isPromise(action.payload.promise)) {
@@ -24,15 +25,13 @@ export default function promiseMiddleware(config = {}) {
       }
 
       const { type, payload, meta } = action;
-
       const [
         PENDING,
         FULFILLED,
         REJECTED,
       ] = promiseTypeSuffixes;
-
       const getAction = (newPayload, isRejected) => ({
-        type: `${type}_${isRejected ? REJECTED : FULFILLED}`,
+        type: isRejected ? type[2] : type[1],
         ...((newPayload === null || typeof newPayload === 'undefined') ? {} : {
           payload: newPayload,
         }),
@@ -52,9 +51,8 @@ export default function promiseMiddleware(config = {}) {
         promise = payload;
         data = null;
       }
-
       next({
-        type: `${type}_${PENDING}`,
+        type: type[0],
         ...(!!data ? { payload: data } : {}),
         ...(!!meta ? { meta } : {}),
       });
@@ -67,8 +65,15 @@ export default function promiseMiddleware(config = {}) {
         if (action.fallback && (typeof action.fallback === 'function')) {
           action.fallback(reason);
         } else {
-          // 这里如果没有传入 fallback 方法，则默认执行报错
-          // message.error('请求出错', 2.5);
+          if(reason.indexOf("404") > -1){
+            setTimeout(()=>{
+              message.error("请求未找到,请联系管理员!")
+            },500)
+          }else{
+            setTimeout(()=>{
+              message.error("服务器未响应,请稍后重试!")
+            },500)
+          }
         }
 
         throw reason;

@@ -9,6 +9,7 @@ require('es6-promise').polyfill();
 const AuthorizationToken = localStorage.getItem('token');
 
 const errorMessages = res => `${res.status} ${res.statusText}`;
+// 是否校验xss
 let isXss = true;
 function check401(res) {
   // 登陆界面不需要做401校验
@@ -88,7 +89,7 @@ function toQueryString(object) {
   return array.join('&');
 }
 
-function cFetch(url, options, cb, tempLogin) {
+function cFetch(url, options) {
   let mergeUrl = url;
   const defaultOptions = {
     method: 'GET',
@@ -156,7 +157,6 @@ function cFetch(url, options, cb, tempLogin) {
 
 
   const opts = Object.assign({}, defaultOptions, { ...options });
-  // add query params to url when method is GET
   if (opts && opts.method.toUpperCase() === 'GET' && opts.params) {
     mergeUrl = `${mergeUrl}?${toQueryString(opts.params)}`;
   }
@@ -172,14 +172,9 @@ function cFetch(url, options, cb, tempLogin) {
     .then(check404)
     .then(checkStatus)
     .then(jsonParse);
-
-  if (typeof cb === 'function') {
-    cb(fetchResult);
-  }
   return fetchResult;
 }
 
-// catch all the unhandled exception
 window.addEventListener('unhandledrejection', (err) => {
   const ex = err.reason;
   if ((ex.constructor && ex.constructor === StandardError) || ex.msg) {

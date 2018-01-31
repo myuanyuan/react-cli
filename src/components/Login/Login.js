@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Form, Icon, Input, Button, Checkbox } from 'antd'
 import createHistory from 'history/createBrowserHistory'
+import * as loginActions from '../../reducers/login'
 import './Login.css';
 
 const FormItem = Form.Item;
 const history = createHistory()
 
 @Form.create()
+
+@connect(
+  state => ({
+    loginData: state.loginData,
+  }),
+  dispatch => bindActionCreators({ ...loginActions }, dispatch)
+)
 
 export class Login extends React.Component {
    constructor(props) {
@@ -19,7 +29,9 @@ export class Login extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        this.props.history.push('/home');
+        this.props.login(values).then((res)=>{
+          this.props.history.push('/home');
+        })
       }
     });
   }

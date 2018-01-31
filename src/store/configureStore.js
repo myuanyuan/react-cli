@@ -5,7 +5,7 @@ import thunk from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
 import rootReducer from '../reducers'
 import initialState from '../constants/initialState'
-
+import promiseMiddleware from './../utils/promise-middleware';
 export const history = createHistory()
 
 const enhancers = []
@@ -13,6 +13,7 @@ const middleware = [
   thunk,
   logger,
   routerMiddleware(history),
+  promiseMiddleware(),
 ]
 
 if (process.env.NODE_ENV === 'development') {

@@ -15,11 +15,11 @@ export class Nav extends Component {
     this.menus=[
       {name: "首页", path: '/home', classname: '/home',
       sonList:[
-        {name: "登陆", path: '/login', classname: '/login'},
+        {name: "登陆", path: '/login.html', classname: '/login.html'},
         {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
       ],
     },
-      {name: "登陆", path: '/login', classname: '/login'},
+      {name: "登陆", path: '/login.html', classname: '/login.html'},
       {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
       {name: "页内登陆", path: '/home/login', classname: '/home/login'}
     ];
@@ -52,7 +52,6 @@ export class Nav extends Component {
   };
   render(){
       // const currentPath = history.location.pathname;
-      debugger
       return(
         <Header className='app-header'>
         <div className="logo" />
@@ -65,7 +64,7 @@ export class Nav extends Component {
           >
             {this.renderNav()}
           </Menu>
-          <Link className='login-out' to='./login'>退出</Link>
+          <Link className='login-out' to='./login.html'>退出</Link>
         </Header>
       )
   }
