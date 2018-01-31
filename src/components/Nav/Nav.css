@@ -4,3 +4,27 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   float: left; }
+
+.app-header {
+  position: 'fixed';
+  width: '100%';
+  background: #fff; }
+  .app-header .login-out {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    line-height: 64px;
+    color: rgba(0, 0, 0, 0.65); }
+
+.ant-menu-horizontal.ant-menu-sub, .ant-menu-vertical.ant-menu-sub, .ant-menu-vertical-left.ant-menu-sub, .ant-menu-vertical-right.ant-menu-sub {
+  min-width: 80px;
+  text-align: center; }
+
+.ant-menu-submenu-horizontal {
+  min-width: 88px; }
+
+.ant-menu-submenu-popup {
+  top: 68px !important; }
+
+.ant-menu-submenu > .ant-menu {
+  border-radius: 0; }

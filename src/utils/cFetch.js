@@ -11,13 +11,13 @@ const AuthorizationToken = localStorage.getItem('token');
 const errorMessages = res => `${res.status} ${res.statusText}`;
 let isXss = true;
 function check401(res) {
-  // 登录界面不需要做401校验
+  // 登陆界面不需要做401校验
   if (res.status === 401 && !res.url.match('login.html')) {
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
     Modal.error({
-      title: '登录信息过期',
-      content: '您的登录信息已过期，请重新登录',
+      title: '登陆信息过期',
+      content: '您的登陆信息已过期，请重新登陆',
       onOk: () => {
         window.location.href = '/login.html';
       },

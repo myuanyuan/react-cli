@@ -1,7 +1,34 @@
+@import '../../style/config.scss';
+
 #components-layout-demo-fixed .logo {
   width: 120px;
   height: 31px;
   background: rgba(255,255,255,.2);  
   margin: 16px 24px 16px 0;
   float: left;
+}
+.app-header{
+  position: 'fixed';
+  width: '100%';
+  background: #fff;
+  .login-out{
+    position: absolute;
+    right: 40px;
+    top:0;
+    line-height: $nav-height;
+    color: $nav-color; 
+  }
+}
+.ant-menu-horizontal.ant-menu-sub, .ant-menu-vertical.ant-menu-sub, .ant-menu-vertical-left.ant-menu-sub, .ant-menu-vertical-right.ant-menu-sub{
+  min-width: $nav-list-width;
+  text-align: center;
+}
+.ant-menu-submenu-horizontal{
+  min-width: $nav-list-width + 8;
+}
+.ant-menu-submenu-popup{
+  top: $nav-list-width - 12 !important;
+}
+.ant-menu-submenu > .ant-menu{
+  border-radius: 0;
 }

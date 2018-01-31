@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
 import { Menu, Layout } from 'antd';
 import { Router, Route, Link } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
 import './Nav.css';
+
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
+const history = createHistory()
 
 export class Nav extends Component {
   constructor(props) {
     super(props);
-    // this.renderNav=this.renderNav.bind(this);
+    this.renderNav=this.renderNav.bind(this);
     this.menus=[
-      {name: "首页", path: '/home', classname: '/home'},
-      {name: "登录", path: '/login', classname: '/login'},
+      {name: "首页", path: '/home', classname: '/home',
+      sonList:[
+        {name: "登陆", path: '/login', classname: '/login'},
+        {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
+      ],
+    },
+      {name: "登陆", path: '/login', classname: '/login'},
       {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
-      {name: "页内登录", path: '/home/login', classname: '/home/login'}
+      {name: "页内登陆", path: '/home/login', classname: '/home/login'}
     ];
   }
-  renderNav = () => {
+  renderNav() {
     const navlists = this.menus || [];
     const menuItems = navlists.map((menu, index) => {
       if (menu.sonList) {
@@ -43,20 +51,21 @@ export class Nav extends Component {
     return menuItems;
   };
   render(){
-    const currentPath = 1;
-      // const currentPath = history.getCurrentLocation().pathname;
+      // const currentPath = history.location.pathname;
+      debugger
       return(
-        <Header style={{ position: 'fixed', width: '100%' }}>
+        <Header className='app-header'>
         <div className="logo" />
           <Menu
             id="main-header-nav-list"
             mode="horizontal"
             selectedKeys={[]}
-            style={{ lineHeight: '64px', height: '64px' }}
+            style={{ lineHeight: '64px', height: '64px', width:'100%' }}
             onSelect = {this.onMenuSelect}
           >
             {this.renderNav()}
           </Menu>
+          <Link className='login-out' to='./login'>退出</Link>
         </Header>
       )
   }
