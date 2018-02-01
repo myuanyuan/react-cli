@@ -1,4 +1,4 @@
-window.host = 'http://zyra.test.gagogroup.cn';
+window.host = '';
 window.baseUri = window.host+'/api/v1';
 
 window.API_CONFIG = {
