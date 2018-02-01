@@ -15,7 +15,8 @@ npm install babel-preset-stage-2 --save-dev
 ```
 
 
-2. ```
+2. 
+```
 npm install --save-dev babel-plugin-transform-decorators-legacy
 ```
 然后在node_modules/babel-preset-react-app/index.js plugins中添加
