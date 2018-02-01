@@ -16,7 +16,6 @@ export class Nav extends Component {
       {name: "首页", path: '/home', classname: '/home',
       sonList:[
         {name: "登陆", path: '/login.html', classname: '/login.html'},
-        {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
       ],
     },
       {name: "登陆", path: '/login.html', classname: '/login.html'},
@@ -51,14 +50,14 @@ export class Nav extends Component {
     return menuItems;
   };
   render(){
-      // const currentPath = history.location.pathname;
+      const currentPath = window.location.pathname;
       return(
         <Header className='app-header'>
         <div className="logo" />
           <Menu
             id="main-header-nav-list"
             mode="horizontal"
-            selectedKeys={[]}
+            selectedKeys={[currentPath]}
             style={{ lineHeight: '64px', height: '64px', width:'100%' }}
             onSelect = {this.onMenuSelect}
           >
