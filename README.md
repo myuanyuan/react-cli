@@ -9,12 +9,8 @@ npm install babel-preset-stage-2 --save-dev
 ```
 根目录下创建.babelrc
 ```
-{
-  "presets": ["react-native-stage-0/decorator-support"]
-}
+{"presets": ["react-native-stage-0/decorator-support"]}
 ```
-
-
 2. 
 ```
 npm install --save-dev babel-plugin-transform-decorators-legacy
