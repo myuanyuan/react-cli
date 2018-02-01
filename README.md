@@ -1,7 +1,13 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
+项目需要配置装饰器
+```npm install --save-dev babel-plugin-transform-decorators-legacy```
+然后在node_modules/babel-preset-react-app/index.js plugins中添加
+```require.resolve('babel-plugin-transform-decorators-legacy')```
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
 
 ## Table of Contents
 
