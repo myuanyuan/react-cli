@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import { BaseTitle, Nav, Login } from './components';
-import { Home } from './containers';
+import { BaseTitle, Nav } from './components';
+import { Home, Login } from './containers';
 
 
 const Routes = ({ match }) => {

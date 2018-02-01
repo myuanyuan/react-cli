@@ -6,8 +6,7 @@ import {ConnectedRouter} from 'react-router-redux'
 import store, { history } from './store/configureStore'
 import registerServiceWorker from './registerServiceWorker'
 import './style/main.css'
-import { App } from './containers'
-import { Login } from './components'
+import { App, Login } from './containers'
 
 const target = document.querySelector('#root');
 

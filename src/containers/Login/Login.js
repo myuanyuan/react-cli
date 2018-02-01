@@ -25,11 +25,15 @@ export class Login extends React.Component {
    }
   
   handleSubmit (e) {
+    const _this = this;
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
         this.props.login(values).then((res)=>{
+          _this.props.saveUserData(res.value);
+          // debugger
+          // _this.props.loginData.userData
           this.props.history.push('/home');
         })
       }

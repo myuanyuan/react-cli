@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Layout } from 'antd';
-import {BaseTitle, Nav, Login } from '../../components';
+import {BaseTitle, Nav } from '../../components';
+ import { Login } from '../../containers'
 import Routes from '../../routes';
 import './App.css';
 const { Header, Content } = Layout;
