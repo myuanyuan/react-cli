@@ -1,6 +1,23 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
-啦啦啦，解决啦，面目全非
+啦啦啦，解决啦，面目全非，亲测可用
+todo List
+
+
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
 
 如果需要更多配置请参考[create-react-app-react-scripts](https://github.com/myuanyuan/create-react-app-react-scripts)
 
