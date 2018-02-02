@@ -1,7 +1,12 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
 啦啦啦，解决啦，面目全非，亲测可用
+
 todo List
+1. test，被我暂时删除了... 
+2. 由于是SPA，存在首次打开较慢的问题---考虑MPA+服务端渲染首页
+3. 使用ts---会另建一个project
+4. 测试各种性能问题
 
 
 ### `npm start`
