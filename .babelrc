@@ -5,5 +5,8 @@
       "stage-0",
       "react-native-stage-0/decorator-support"
     ],
-    "plugins": ["transform-decorators-legacy"]
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-runtime", ["import",{"libraryName":"antd","style":true}]
+    ]
   }

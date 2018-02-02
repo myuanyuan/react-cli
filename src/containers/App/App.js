@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Layout } from 'antd';
-import {BaseTitle, Nav } from '../../components';
- import { Login } from '../../containers'
+import { Nav } from '../../components';
 import Routes from '../../routes';
 import './App.css';
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 export class App extends Component {
   render() {
