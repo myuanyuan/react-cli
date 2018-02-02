@@ -1,26 +1,6 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
-项目需要配置装饰器
-提供如下两种方式:
-
-1. 
-```
-npm install babel-preset-stage-2 --save-dev
-```
-根目录下创建.babelrc
-```
-{"presets": ["react-native-stage-0/decorator-support"]}
-```
-2. 
-```
-npm install --save-dev babel-plugin-transform-decorators-legacy
-```
-然后在node_modules/babel-preset-react-app/index.js plugins中添加
-
-```
-require.resolve('babel-plugin-transform-decorators-legacy')
-```
-
+啦啦啦，解决啦，面目全非
 
 如果需要更多配置请参考[create-react-app-react-scripts](https://github.com/myuanyuan/create-react-app-react-scripts)
 
