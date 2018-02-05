@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Menu, Layout } from 'antd';
-import { Router, Route, Link } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory'
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
-const history = createHistory()
 
 export class Nav extends Component {
   constructor(props) {

@@ -70,7 +70,7 @@ module.exports = {
         paths.appIndexJs,require.resolve('react-error-overlay'),
         require.resolve('react-dev-utils/webpackHotDevClient')
     ],
-    vendor: ['react', 'react-dom', 'react-router','react-router-dom', 'antd']
+    vendor: ['react', 'react-dom', 'react-router','react-router-dom', 'antd', 'echarts']
   },
   output: {
     // The build folder.

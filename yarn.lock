@@ -1235,7 +1235,7 @@ babel-preset-stage-3@^6.24.1:
     babel-plugin-transform-exponentiation-operator "^6.24.1"
     babel-plugin-transform-object-rest-spread "^6.22.0"
 
-babel-register@^6.24.1, babel-register@^6.26.0:
+babel-register@^6.26.0:
   version "6.26.0"
   resolved "http://registry.npm.taobao.org/babel-register/download/babel-register-6.26.0.tgz#6ed021173e2fcb486d7acb45c6009a856f647071"
   dependencies:
@@ -2434,6 +2434,19 @@ ecc-jsbn@~0.1.1:
   resolved "http://registry.npm.taobao.org/ecc-jsbn/download/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
+
+echarts-liquidfill@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/echarts-liquidfill/download/echarts-liquidfill-2.0.0.tgz#65e6dffb5aec42fc588844360d57cb723b02287b"
+  dependencies:
+    echarts "^4.0.2"
+    zrender "^4.0.1"
+
+echarts@^4.0.2:
+  version "4.0.2"
+  resolved "http://registry.npm.taobao.org/echarts/download/echarts-4.0.2.tgz#c405e9e479af982383c8ae2b5946e52d058c6220"
+  dependencies:
+    zrender "4.0.1"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -8429,3 +8442,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+zrender@4.0.1, zrender@^4.0.1:
+  version "4.0.1"
+  resolved "http://registry.npm.taobao.org/zrender/download/zrender-4.0.1.tgz#961e77abc5042eaa624b5230f8d673bf648298e9"
