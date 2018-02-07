@@ -1,5 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import './_base.scss';
+html{
+  // font-size: calc(100vw/7.5);
+  font-size: 100px;
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
 }

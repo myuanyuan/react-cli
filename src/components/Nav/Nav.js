@@ -12,13 +12,12 @@ export class Nav extends Component {
     this.renderNav=this.renderNav.bind(this);
     this.menus=[
       {name: "首页", path: '/home', classname: '/home',
-      sonList:[
-        {name: "登陆", path: '/login.html', classname: '/login.html'},
-      ],
+      // sonList:[
+      //   {name: "登陆", path: '/login.html', classname: '/login.html'},
+      // ],
     },
-      {name: "登陆", path: '/login.html', classname: '/login.html'},
-      {name: "页内导航", path: '/home/nav', classname: '/home/nav'},
-      {name: "页内登陆", path: '/home/login', classname: '/home/login'}
+      {name: "导航", path: '/home/nav', classname: '/home/nav'},
+      {name: "登陆", path: '/home/login', classname: '/home/login'}
     ];
   }
   renderNav() {
