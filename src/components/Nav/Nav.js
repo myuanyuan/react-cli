@@ -60,7 +60,7 @@ export class Nav extends Component {
           >
             {this.renderNav()}
           </Menu>
-          <Link className='login-out' to='./login.html'>退出</Link>
+          <Link className='login-out' to='/login.html'>退出</Link>
         </Header>
       )
   }
