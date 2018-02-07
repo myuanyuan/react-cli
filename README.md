@@ -33,10 +33,10 @@ my-app/
   config/
     env.js
     paths.js
-    polyfills.js
-    presets.js
-    webpack.config.dev.js
-    webpack.config.prod.js
+    polyfills.js                // polyfills, you can add sth if you need
+    presets.js                  // plugins, you can add sth if you need
+    webpack.config.dev.js       // the webpackConfig for dev
+    webpack.config.prod.js      // the webpackConfig for prod
     webpackDevServer.config.js
     jest/
       babelTransform.js
@@ -57,8 +57,8 @@ my-app/
     utils/
       createJestConfig.js
 
-  src/
-  config-overrides.js
+  src/                      //  your project
+  config-overrides.js       // enjoy yourself wakaka, for example change the theme of antd
   .babelrc
     
 ```
