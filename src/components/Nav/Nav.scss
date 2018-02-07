@@ -8,9 +8,10 @@
   float: left;
 }
 .app-header{
-  position: 'fixed';
-  width: '100%';
+  position: fixed;
+  width: 100%;
   background: #fff;
+  z-index: 1;
   .login-out{
     position: absolute;
     right: 40px;

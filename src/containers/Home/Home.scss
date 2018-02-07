@@ -1,6 +1,12 @@
+@import '../../style/_config.scss';
 .Home{
+    position: absolute;
+    width: 100%;
     height: 100%;
+    padding-top: $nav-height;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
     .slick-initialized .slick-slide{
         img{
             width: 100%;
@@ -32,25 +38,28 @@
             }
         }
     }
-    .main-list{
-        flex: 1;
-        flex-direction:column; 
-        padding: 0 20px 20px 20px;
-        overflow-y:scroll; 
-        li{
-            height: 44px;
-            line-height: 44px;
-            text-align: center;
-            display: flex;
-            background: gainsboro;
-            border-bottom: 1px solid #000;
-            .tit{
-                width: 44px;
+    .wrapper{
+        overflow: hidden;
+        flex:1;
+        .main-list{
+            flex: 1;
+            flex-direction:column; 
+            padding: 0 20px 20px 20px;
+            li{
                 height: 44px;
-            }
-            .discript{
-                flex: 1;
-                background: #666;
+                line-height: 44px;
+                text-align: center;
+                display: flex;
+                background: gainsboro;
+                border-bottom: 1px solid #000;
+                .tit{
+                    width: 44px;
+                    height: 44px;
+                }
+                .discript{
+                    flex: 1;
+                    background: #666;
+                }
             }
         }
     }

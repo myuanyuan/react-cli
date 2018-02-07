@@ -6,9 +6,10 @@
   float: left; }
 
 .app-header {
-  position: 'fixed';
-  width: '100%';
-  background: #fff; }
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  z-index: 1; }
   .app-header .login-out {
     position: absolute;
     right: 40px;
