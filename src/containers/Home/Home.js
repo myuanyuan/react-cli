@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 import BScroll from 'better-scroll'
+import { MenuItems } from '../../components'
 import './Home.css';
 
 export class Home extends Component {
@@ -23,6 +24,14 @@ export class Home extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    const manus = [
+      {id:'/login.html', value:'item1'},
+      {id:2, value:'item2'},
+      {id:3, value:'item3'},
+      {id:4, value:'item4'},
+      {id:5, value:'item5'},
+      {id:6, value:'item6'}
+    ];
     return (
       <div className="Home">
         <Slider {...settings}>
@@ -34,19 +43,16 @@ export class Home extends Component {
           <div><img src={require("./img/banner1.png")} alt=""/></div>
         </Slider>
           <div className="manu-con">
-            <ul className='manu'>
-              <li><span>1</span></li>
-              <li><span>2</span></li>
-              <li><span>3</span></li>
-              <li><span>4</span></li>
-              <li><span>5</span></li>
-            </ul>
+            <MenuItems
+              style={{height: 84}}
+              manus={manus}
+             />
           </div>
           <div className="wrapper">
             <ul className='main-list'>
               { arr.map((item,index)=>{
                 return <li key={index}>
-                <div className="tit">{index}</div>
+                <div className="tit"></div>
                 <div className="discript"></div>
               </li>
               }) }

@@ -11,25 +11,11 @@
     height: 2rem; }
   .Home .slick-dots {
     bottom: 0; }
-  .Home .manu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 84px;
-    padding: 20px; }
-    .Home .manu li {
-      flex: 1;
-      height: 44px; }
-      .Home .manu li span {
-        display: block;
-        margin: 0 auto;
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        text-align: center;
-        border-radius: 50%;
-        background: pink; }
+  .Home .slick-initialized {
+    overflow: hidden; }
+  .Home .manu span {
+    background: url("./img/item.png") no-repeat center center;
+    background-size: cover; }
   .Home .wrapper {
     overflow: hidden;
     flex: 1; }
@@ -38,15 +24,19 @@
       flex-direction: column;
       padding: 0 20px 20px 20px; }
       .Home .wrapper .main-list li {
-        height: 44px;
-        line-height: 44px;
+        height: 80px;
+        line-height: 80px;
         text-align: center;
         display: flex;
         background: gainsboro;
+        margin: 5px 0;
         border-bottom: 1px solid #000; }
         .Home .wrapper .main-list li .tit {
-          width: 44px;
-          height: 44px; }
+          width: 80px;
+          height: 80px;
+          background: url("./img/good-img.jpg") no-repeat center center;
+          background-size: cover;
+          box-sizing: content-box; }
         .Home .wrapper .main-list li .discript {
           flex: 1;
           background: #666; }

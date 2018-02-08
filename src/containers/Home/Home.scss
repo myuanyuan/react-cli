@@ -16,26 +16,13 @@
     .slick-dots{
         bottom: 0;
     }
+    .slick-initialized{
+        overflow: hidden;
+    }
     .manu{
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items:center;
-        height: 84px;
-        padding: 20px;
-        li{
-            flex: 1;
-            height: 44px;
-            span{
-                display: block;
-                margin: 0 auto;
-                width: 44px;
-                height: 44px;
-                line-height: 44px;
-                text-align: center;
-                border-radius: 50%;
-                background: pink;
-            }
+        span{
+            background: url('./img/item.png') no-repeat center center;
+            background-size: cover;
         }
     }
     .wrapper{
@@ -46,15 +33,19 @@
             flex-direction:column; 
             padding: 0 20px 20px 20px;
             li{
-                height: 44px;
-                line-height: 44px;
+                height: 80px;
+                line-height: 80px;
                 text-align: center;
                 display: flex;
                 background: gainsboro;
+                margin: 5px 0;
                 border-bottom: 1px solid #000;
                 .tit{
-                    width: 44px;
-                    height: 44px;
+                    width: 80px;
+                    height: 80px;
+                    background: url('./img/good-img.jpg') no-repeat center center;
+                    background-size: cover;
+                    box-sizing: content-box;
                 }
                 .discript{
                     flex: 1;
