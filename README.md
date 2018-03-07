@@ -1,6 +1,27 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
 
+### 分支介绍
+
+### master
+
+react16 + react-router-4 + redux + antd + scss
+是比较基础的一个配置
+在 config-overrides.js里面可以配置antd的主题
+
+### mfe 
+react16 + react-router-4 + redux + antd + scss + postcss + flex+ rem + vw + better-scroll
+针对移动端h5适配，支持不同的适配方案
+
+### react-cli-map
+react16 react16 + react-router-4 + redux+antd+scss+ react-router-4 + redux+antd+scss
+引入mapBox-gl-js,针对地图项目
+
+
+
+不同的分支有对应的README，请自行切换分支进行查看
+
+以下针对master
 ```
 git clone git@github.com:myuanyuan/react-cli.git
 cd react-cli
@@ -64,10 +85,13 @@ my-app/
 ```
 
 ### todo List
-1. test，被我暂时删除了... 
-2. 由于是SPA，存在首次打开较慢的问题---考虑MPA+服务端渲染首页
-3. 使用ts---会另建一个project
-4. 测试各种性能问题
+原本想做ts版本的，不过后来想想毕竟前端用ts还是非常少的，而且确实没心情了，放弃了
+[x] 针对移动端进行各种方式适配 
+[x] 针对地图类
+[ ] 提升redux 引入 reselect
+[ ] 文档写好一点
+[ ] 我再想想...
+
 
 如果需要更多配置请参考[create-react-app-react-scripts](https://github.com/myuanyuan/create-react-app-react-scripts)
 
