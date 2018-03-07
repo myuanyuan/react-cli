@@ -1,6 +1,7 @@
 <!--This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).-->
 
-
+mfe 
+### 针对移动端 使用postcss vw 适配
 ```
 git clone git@github.com:myuanyuan/react-cli.git
 cd react-cli
