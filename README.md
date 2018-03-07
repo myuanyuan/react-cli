@@ -6,7 +6,8 @@ hahaha...
 
 
 ### 适配方案
-相信大家对rem和flex布局都很熟悉了，这里就不详细介绍了
+相信大家对rem和flex布局都很熟悉了，这里就不详细介绍了,只聊vw
+
 配置变动：
 ```
 {
@@ -69,9 +70,12 @@ module.exports = {
     ]
 }
 ```
-上面的配置中，postcss-px-to-viewport可以然我们像原来一样去写px，viewportWidth和viewportHeight的配置根据你们家ui给出的设计稿来定就好了。
+上面的配置中，postcss-px-to-viewport可以然我们像原来一样去写px
+
+viewportWidth和viewportHeight的配置根据你们家ui给出的设计稿来定就好了。
+
 postcss-write-svg插件主要通过使用border-image和background来做1px的相关处理。比如
-我们先写一个1像素边框的scss函数
+我们先写一个1像素边框
 ```
 @svg 1px-border {
   height: 2px; 
@@ -89,20 +93,10 @@ postcss-write-svg插件主要通过使用border-image和background来做1px的�
   border-image: svg(1px-border param(--color #00b1ff)) 2 2 stretch; 
   }
 ```
-当然还有background-image的实现方式，具体参考[postcss-write-svg]()https://github.com/jonathantneal/postcss-write-svghttps://github.com/jonathantneal/postcss-write-svg
+当然还有background-image的实现方式，具体参考[postcss-write-svg](https://github.com/jonathantneal/postcss-write-svghttps://github.com/jonathantneal/postcss-write-svg)
 
 安装插件
 
-```
-npm i postcss-aspect-ratio-mini -D
-npm i postcss-px-to-viewport -D
-npm i postcss-write-svg -D
-npm i postcss-cssnext -D
-npm i postcss-viewport-units -D
-npm i cssnano -D
-npm i cssnano-preset-advanced -D
-```
-或者
 ```
 npm i postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext postcss-viewport-units cssnano cssnano-preset-advanced --D
 ```
@@ -119,7 +113,7 @@ package.json文件中：
 
 ```
 
-注意autoprefixery一次就够了 在cssnano和postcss-cssnext把默认配置改为false，否则会影响性能
+注意:autoprefixery一次就够了 在cssnano和postcss-cssnext把默认配置改为false，否则会影响性能
 
 接下来，修改 public/index.html
 主要有三个地方
@@ -156,8 +150,8 @@ package.json文件中：
       }
     </script>
 ```
-另外，还可以通过媒体查询对iphoneX可能出现的兼容问题进行hack
-如下：
+另外，还可以通过媒体查询对iphoneX可能出现的兼容问题进行hack，
+代码如下：
 ```
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
    /* iPhone X 独有样式写在这里*/ 
@@ -169,11 +163,13 @@ package.json文件中：
 ```
 git clone git@github.com:myuanyuan/react-cli.git
 cd react-cli
+git checkout -b mfe
 npm install
 ```
 
 ### `npm start`
 你可以看到你的已经完美转为vw了，现在，在不同尺寸的设备上试一下吧
+
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -182,6 +178,7 @@ You will also see any lint errors in the console.
 
 
 ### `npm run build`
+在打包好之后，运行一遍
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
