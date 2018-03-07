@@ -62,7 +62,7 @@ module.exports = {
   bail: true,
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
-  devtool: shouldUseSourceMap ? 'source-map' : false,
+  // devtool: shouldUseSourceMap ? 'source-map' : false,
   // In production, we only want to load the polyfills and the app code.
   entry: {
     app:[
@@ -220,27 +220,30 @@ module.exports = {
                       options: {
                         importLoaders: 1,
                         minimize: true,
-                        sourceMap: shouldUseSourceMap,
+                        // sourceMap: shouldUseSourceMap,
                       },
                     },
                     {
                       loader: require.resolve('postcss-loader'),
                       options: {
+                        config: {
+                          path: 'postcss.config.js'  // 这个得在项目根目录创建此文件
+                        },
                         // Necessary for external CSS imports to work
                         // https://github.com/facebookincubator/create-react-app/issues/2677
                         ident: 'postcss',
-                        plugins: () => [
-                          require('postcss-flexbugs-fixes'),
-                          autoprefixer({
-                            browsers: [
-                              '>1%',
-                              'last 4 versions',
-                              'Firefox ESR',
-                              'not ie < 9', // React doesn't support IE8 anyway
-                            ],
-                            flexbox: 'no-2009',
-                          }),
-                        ],
+                        // plugins: () => [
+                        //   require('postcss-flexbugs-fixes'),
+                        //   autoprefixer({
+                        //     browsers: [
+                        //       '>1%',
+                        //       'last 4 versions',
+                        //       'Firefox ESR',
+                        //       'not ie < 9', // React doesn't support IE8 anyway
+                        //     ],
+                        //     flexbox: 'no-2009',
+                        //   }),
+                        // ],
                       },
                     },
                   ],
@@ -319,7 +322,7 @@ module.exports = {
         // https://github.com/facebookincubator/create-react-app/issues/2488
         ascii_only: true,
       },
-      sourceMap: shouldUseSourceMap,
+      // sourceMap: shouldUseSourceMap,
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
     new ExtractTextPlugin({
