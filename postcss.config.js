@@ -12,7 +12,11 @@ module.exports = {
         }),
         require("postcss-aspect-ratio-mini"),
         require("postcss-write-svg")({ utf8: false }),
-        require("postcss-cssnext"),
+        require("postcss-cssnext")({
+            features: {
+                autoprefixer: false,
+            }
+        }),
         require("postcss-px-to-viewport")({
             viewportWidth: 750,
             viewportHeight: 1334,
