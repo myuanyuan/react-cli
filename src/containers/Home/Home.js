@@ -44,7 +44,7 @@ export class Home extends Component {
         </Slider>
           <div className="manu-con">
             <MenuItems
-              style={{height: 84}}
+              style={{height: '100%'}}
               manus={manus}
              />
           </div>
