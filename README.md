@@ -3,7 +3,7 @@
 ## mfe 
 ### 针对移动端 使用postcss vw 适配
 hahaha... 
-
+导航从pc直接移来的，好丑，请忽略。。。
 
 ### 适配方案
 相信大家对rem和flex布局都很熟悉了，这里就不详细介绍了,只聊vw
@@ -139,7 +139,7 @@ package.json文件中：
             var screenWidth = window.screen.width;
             var winWidth = window.innerWidth;
             var winHeight = window.innerHeight;
-            alert(
+            console.log(
                 "Windows DPI:" + winDPI +
                 ";\ruAgent:" + uAgent +
                 ";\rScreen Width:" + screenWidth +
@@ -166,7 +166,6 @@ cd react-cli
 git checkout -b mfe
 npm install
 ```
-
 ### `npm start`
 你可以看到你的已经完美转为vw了，现在，在不同尺寸的设备上试一下吧
 

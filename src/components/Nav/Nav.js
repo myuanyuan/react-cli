@@ -55,7 +55,7 @@ export class Nav extends Component {
             id="main-header-nav-list"
             mode="horizontal"
             selectedKeys={[currentPath]}
-            style={{ lineHeight: '64px', height: '64px', width:'100%' }}
+            style={{ height: '100%', width:'100%' }}
             onSelect = {this.onMenuSelect}
           >
             {this.renderNav()}
