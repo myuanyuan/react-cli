@@ -11,3 +11,7 @@ html{
     font-family: sans-serif;
   }
 }
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+   /* iPhone X 独有样式写在这里*/ 
+   
+}
